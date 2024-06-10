@@ -1,5 +1,10 @@
 # Release Notes for Mollie for Craft Commerce
 
+## Unreleased
+
+### Added
+- Added Dutch translations.
+
 ## 4.2.0 - 2024-03-20
 
 ### Added
