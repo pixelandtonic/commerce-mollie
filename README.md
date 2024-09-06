@@ -9,7 +9,7 @@ This plugin provides a [Mollie](https://www.mollie.com/) integration for [Craft 
 Mollie 4.2.x requires either:
 
 - Craft 4.0 and Craft Commerce 4.0 or later
-- Craft 5.0 and Craft Commerce 5.0 or later
+- or, Craft 5.0 and Craft Commerce 5.0 or later
 
 Mollie 4.1.x is only compatible with Craft 4.0 and Craft Commerce 4.0 or later.
 
