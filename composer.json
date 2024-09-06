@@ -1,6 +1,6 @@
 {
   "name": "craftcms/commerce-mollie",
-  "description": "Mollie integration for Craft Commerce 4.0+",
+  "description": "Mollie integration for Craft Commerce 5.0+",
   "type": "craft-plugin",
   "keywords": [
     "mollie",
@@ -25,9 +25,9 @@
   },
   "require": {
     "php": "^8.0.2",
-    "craftcms/cms": "^4.0.0",
-    "craftcms/commerce": "^4.0.0",
-    "craftcms/commerce-omnipay": "^4.0.0.1",
+    "craftcms/cms": "^4.0.0-RC3|^5.0.0-beta.7",
+    "craftcms/commerce": "^4.0.0-RC1|^5.0.0-beta.1",
+    "craftcms/commerce-omnipay": "^4.1.0",
     "omnipay/mollie": "^5.0"
   },
   "autoload": {
@@ -55,9 +55,6 @@
       "yiisoft/yii2-composer": true,
       "craftcms/plugin-installer": true,
       "php-http/discovery": true
-    },
-    "platform": {
-      "php": "8.0.2"
     }
   }
 }
