@@ -119,7 +119,7 @@ class Gateway extends OffsiteGateway
     protected function createPaymentRequest(Transaction $transaction, ?CreditCard $card = null, ?ItemBag $itemBag = null): array
     {
         $request = parent::createPaymentRequest($transaction, $card, $itemBag);
-        $email = $transaction?->getOrder()?->getEmail() ?? null;
+        $email = $transaction->getOrder()?->getEmail() ?? null;
 
         if ($email) {
             $request['billingEmail'] = $email;
