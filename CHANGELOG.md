@@ -1,10 +1,9 @@
 # Release Notes for Mollie for Craft Commerce
 
-## Unreleased
+## 4.2.1 - 2025-02-07
 
 - Added Dutch translations.
 - Fixed a bug where `billingEmail` wasn’t being passed in purchase request to Mollie. ([#62](https://github.com/craftcms/commerce-mollie/issues/62))
-
 
 ## 4.2.0 - 2024-03-20
 
