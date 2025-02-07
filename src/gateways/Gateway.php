@@ -25,8 +25,10 @@ use craft\helpers\ArrayHelper;
 use craft\web\Response;
 use craft\web\View;
 use Omnipay\Common\AbstractGateway;
+use Omnipay\Common\CreditCard;
 use Omnipay\Common\Exception\InvalidRequestException;
 use Omnipay\Common\Issuer;
+use Omnipay\Common\ItemBag;
 use Omnipay\Common\Message\AbstractResponse;
 use Omnipay\Common\Message\ResponseInterface;
 use Omnipay\Common\PaymentMethod;
@@ -109,6 +111,21 @@ class Gateway extends OffsiteGateway
                 $request['issuer'] = $paymentForm->issuer;
             }
         }
+    }
+
+    /**
+     * @inheritdoc
+     */
+    protected function createPaymentRequest(Transaction $transaction, ?CreditCard $card = null, ?ItemBag $itemBag = null): array
+    {
+        $request = parent::createPaymentRequest($transaction, $card, $itemBag);
+        $email = $transaction->getOrder()?->getEmail() ?? null;
+
+        if ($email) {
+            $request['billingEmail'] = $email;
+        }
+
+        return $request;
     }
 
     /**
